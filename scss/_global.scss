@@ -1,0 +1,108 @@
+body {
+    background: #000000;
+    font-family: 'Raleway-Light', sans-serif;
+}
+
+.navbar {
+    padding: 48px 75px;
+    p.phone-number {
+        font-size: 24px;
+        margin-left: 15px;
+        color: #ffffff;
+        letter-spacing: 1.2px;
+    }
+    div.instagram .instagram-icon {
+        cursor: pointer;
+        display: block;
+        width: 36px;
+        height: 35px;
+        margin-top: -17px;
+        background: url('../img/instagram_logo.png') center no-repeat;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar {
+        background: #000000;
+        padding: 16px 12px;
+        p.phone-number {
+            font-size: 24px;
+        }
+        div.instagram {
+            text-align: right;
+            margin-top: -51px;
+            .instagram-icon {
+                display: inline-block;
+                margin-top: -1px;
+            }
+        }
+    }
+}
+
+footer {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    .copyright {
+        color: #ffffff;
+        font-size: 12px;
+        letter-spacing: 1.2px;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+}
+
+@media (max-width: 767px) {
+    footer {
+        position: relative;
+        bottom: 0px;
+        left: 0px;
+        margin-left: 10px;
+        margin-top: 15px;
+        transform: none;
+    }
+}
+
+.modal .modal-dialog {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.modal .modal-dialog .modal-content .modal-body {
+    padding: 0px;
+}
+
+.modal .modal-dialog .modal-content .modal-body #modal-image {
+    width: 100%;
+}
+
+@media (max-width: 767px) {
+    .modal .modal-dialog {
+        max-width: 80%;
+    }
+}
+
+.btn-close-section {
+    display: block;
+    text-align: right;
+    width: 35px;
+    height: 35px;
+    background: url('../img/close-circle-icon.svg')center no-repeat;
+    background-size: cover;
+    border: none;
+    outline: none;
+    transition: transform 0.3s ease-in-out;
+    &:focus {
+        border: none;
+        outline: none;
+    }
+    &:hover {
+        transform: rotate(180deg);
+    }
+}

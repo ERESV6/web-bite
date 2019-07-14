@@ -1,0 +1,93 @@
+.section-checkout {
+    display: block;
+    .blocks-wrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 900px;
+        height: 300px;
+        overflow: hidden;
+        display: none;
+        .block {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            float: left;
+            cursor: pointer;
+            &.services {
+                margin-top: -300px;
+                background: rgb(106, 106, 106);
+                transition: margin-top 0.2s ease-in-out;
+                &:hover {
+                    background: rgb(116, 116, 116);
+                    h3 {
+                        font-size: 26px;
+                    }
+                }
+            }
+            &.gallery {
+                margin-top: -300px;
+                background: rgb(71, 71, 71);
+                transition: margin-top 0.25s ease-in-out;
+                &:hover {
+                    background: rgb(81, 81, 81);
+                    h3 {
+                        font-size: 26px;
+                    }
+                }
+            }
+            &.contact {
+                margin-top: -300px;
+                background: rgb(42, 42, 42);
+                transition: margin-top 0.3s ease-in-out;
+                &:hover {
+                    background: rgb(52, 52, 52);
+                    h3 {
+                        font-size: 26px;
+                    }
+                }
+            }
+            h3 {
+                text-transform: uppercase;
+                text-align: center;
+                margin-top: 138px;
+                color: #ffffff;
+                letter-spacing: 2px;
+                font-family: 'Raleway-SemiBold', sans-serif;
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+@media (max-width: 920px) {
+    .section-checkout {
+        .blocks-wrapper {
+            width: 750px;
+            height: 250px;
+            .block {
+                width: 250px;
+                height: 250px;
+                &.services {
+                    margin-top: -250px;
+                }
+                &.gallery {
+                    margin-top: -250px;
+                }
+                &.contact {
+                    margin-top: -250px;
+                }
+                h3 {
+                    margin-top: 113px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .section-checkout {
+        display: none;
+    }
+}
