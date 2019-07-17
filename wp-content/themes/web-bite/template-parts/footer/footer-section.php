@@ -1,0 +1,1 @@
+<span class="copyright">2019 © <strong>web-bite.pl</strong> - Wszelkie prawa zastrzeżone.</span>
