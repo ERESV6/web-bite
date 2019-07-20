@@ -1,3 +1,3 @@
 <?php get_header(); ?>
-<h1>404 Not Found</h1>
+<img src="<?php echo get_template_directory_uri()?>/assets/img/404.png" alt="404 Not found" class="img-not-found">
 <?php get_footer();

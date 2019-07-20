@@ -1,1 +1,0 @@
-<p>Selected page content here - add new page then go to url by title or URL slug. Header, footer visibility edit it page.php</p>
