@@ -45,12 +45,12 @@
                 overflow-x: hidden;
             }
             .card.mb-3 {
-                max-height: 100px;
                 margin-bottom: 15px !important;
                 background-color: transparent;
-                overflow: hidden;
                 .card-img {
                     cursor: pointer;
+                    height: 100px;
+                    object-fit: cover;
                 }
                 .card-body {
                     .card-title {

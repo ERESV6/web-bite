@@ -24,15 +24,7 @@
     <div class="services">
         <button class="btn-close-section"></button>
         <h1>Oferta</h1>
-        <p class="semi-bold">Wykonuję między innymi:</p>
-        <ul>
-            <li>- strony oraz aplikacje internetowe spełniające współczesne wymagania rynku</li>
-            <li>- w pełni dostosowany do potrzeb WordPress</li>
-            <li>- web-design, loga, broszury, plakaty reklamowe itp.</li>
-            <li>- administracja WWW</li>
-        </ul>
-        <p class="more-details">Po więcej szczegółów zapraszam do kontaktu.</p>
-        <p>Do każdego projektu podchodzę indywidualnie. Cena zależna jest od stopnia zaawansowania pod kątem design’u, funkcjonalności w niej zawartych oraz od ogólnych rozmiarów całego projektu.</p>
+        <?php the_field('oferta', 7); ?>        
     </div>
 </section>
 <section class="section-gallery">
@@ -49,63 +41,34 @@
         <button class="btn-close-section"></button>
         <h1>Przykładowe realizacje</h1>
         <div data-simplebar class="examples-wrapper">
-            <div class="row">
+                <div class="row">    
+                <?php            
+                    $images = acf_photo_gallery('galeria', 7);           
+                    if( count($images) ):                    
+                        foreach($images as $image):                        
+                            $title = $image['title'];
+                            $caption= $image['caption'];
+                            $full_image_url= $image['full_image_url'];
+                            $thumbnail_image_url= $image['thumbnail_image_url'];                                                
+                ?>   
                 <div class="col-md-6">
                     <div class="card mb-3">
                         <div class="row no-gutters">
                             <div class="col-md-4">
-                                <img id="img-modal-open" src="<?php echo get_template_directory_uri()?>/assets/img/gallery/project1.webp" class="card-img" data-toggle="modal" data-target="#galleryModal" alt="project 1">
+                                <img id="img-modal-open" srcset="<?php echo $thumbnail_image_url; ?>" alt="<?php echo $title; ?>" 
+                                title="<?php echo $title; ?>" class="card-img" data-toggle="modal" data-target="#galleryModal" 
+                                src="<?php echo $full_image_url; ?>">                                                    
                             </div>
                             <div class="col-md-8">
                                 <div class="card-body">
-                                    <h5 class="card-title">Przykładowy tytuł</h5>
-                                    <p class="card-text">Przykładowy krótki opis projektu.</p>
+                                    <h5 class="card-title"><?php echo $title; ?></h5>
+                                    <p class="card-text"><?php echo $caption; ?></p>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="card mb-3">
-                        <div class="row no-gutters">
-                            <div class="col-md-4">
-                                <img id="img-modal-open" src="<?php echo get_template_directory_uri()?>/assets/img/gallery/project2.webp" class="card-img" data-toggle="modal" data-target="#galleryModal" alt="project 2">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">Przykładowy tytuł</h5>
-                                    <p class="card-text">Przykładowy krótki opis projektu.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card mb-3">
-                        <div class="row no-gutters">
-                            <div class="col-md-4 ">
-                                <img id="img-modal-open" src="<?php echo get_template_directory_uri()?>/assets/img/gallery/project3.webp" class="card-img" data-toggle="modal" data-target="#galleryModal" alt="project 3">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">Przykładowy tytuł</h5>
-                                    <p class="card-text">Przykładowy krótki opis projektu.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card mb-3">
-                        <div class="row no-gutters">
-                            <div class="col-md-4 ">
-                                <img id="img-modal-open" src="<?php echo get_template_directory_uri()?>/assets/img/gallery/project4.webp" class="card-img" data-toggle="modal" data-target="#galleryModal" alt="project 4">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">Przykładowy tytuł</h5>
-                                    <p class="card-text">Przykładowy krótki opis projektu.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>                
+                    </div>   
+                </div>                              
+                <?php endforeach; endif; ?>                                         
             </div>
         </div>
     </div>
@@ -114,7 +77,6 @@
     <div class="contact">
         <button class="btn-close-section"></button>
         <h1>Kontakt</h1>
-        <p>Dostępny jestem prawie zawsze. Głównie w godzinach od 11 do 22.<br> Na maile staram się odpowiadać jak najszybciej.</p>
-        <p>telefon: 123 456 789 <br> mail: kontakt@web-bite.pl</p>
+        <?php the_field('kontakt', 7); ?>        
     </div>
 </section>
