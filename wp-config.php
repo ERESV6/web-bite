@@ -26,7 +26,7 @@ define( 'DB_NAME', 'wp_web-bite' );
 define( 'DB_USER', 'wp_web-bite' );
 
 /** MySQL database password */
-define( 'DB_PASSWORD', 'nTeLd0Da1tfRWRQX' );
+define( 'DB_PASSWORD', 'qwas' );
 
 /** MySQL hostname */
 define( 'DB_HOST', 'localhost' );

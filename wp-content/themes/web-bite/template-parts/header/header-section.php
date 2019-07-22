@@ -6,7 +6,7 @@
                     <img src="<?php echo get_template_directory_uri()?>/assets/img/phone_logo.png" alt="kontakt telefoniczny">
                 </li>
                 <li class="nav-item">
-                    <p class="phone-number">tel. 123 456 789</p>
+                    <p class="phone-number">tel. 123 456 111</p>
                 </li>
             </ul>
         </div>
